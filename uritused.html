@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üritused - Kidrakuur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: sans-serif; }
+    </style>
+</head>
+<body class="bg-black">
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/et_EE/sdk.js#xfbml=1&version=v18.0" nonce="KdRaKuUr"></script>
+
+    <div class="relative min-h-screen w-screen overflow-x-hidden grayscale-[100%] sepia-[.25]">
+        
+        <video autoplay loop muted playsinline class="fixed top-0 left-0 h-full w-full object-cover blur-[2px] z-0">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <div class="fixed inset-0 bg-black bg-opacity-80 z-0"></div>
+
+        <div class="relative z-10 flex flex-col min-h-screen">
+            
+            <header class="w-full p-6 flex justify-between items-center z-20">
+                <a href="index.html" class="block w-16 hover:opacity-80 transition">
+                    <img src="logo-white.svg" alt="Avalehele">
+                </a>
+
+                <nav>
+                    <ul class="flex gap-8 text-white uppercase tracking-widest text-sm font-bold flex-wrap justify-end">
+                        <li><a href="index.html" class="hover:text-gray-300 hover:underline transition">Avaleht</a></li>
+                        <li><a href="uritused.html" class="text-gray-300 underline transition">Üritused</a></li>
+                        <li><a href="rent.html" class="hover:text-gray-300 hover:underline transition">Ruumide rent</a></li>
+                        <li><a href="kontakt.html" class="hover:text-gray-300 hover:underline transition">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="flex-grow w-full max-w-4xl mx-auto p-6 md:p-12 z-10 flex flex-col items-center">
+                
+                <h1 class="text-4xl md:text-5xl font-bold uppercase tracking-widest mb-6 text-white text-center border-b border-white/20 pb-4">
+                    Tulevased Üritused
+                </h1>
+                
+                <p class="text-gray-300 text-lg mb-8 text-center max-w-2xl">
+                    Siit leiad info meie järgmiste kontsertide, pidude ja sündmuste kohta. Info uueneb automaatselt meie Facebooki lehelt.
+                </p>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-2xl p-1 w-full flex justify-center max-w-[500px]">
+                    
+                    <div class="fb-page" 
+                        data-href="https://www.facebook.com/KidrakuurKultuuriklubi" 
+                        data-tabs="events" 
+                        data-width="500" 
+                        data-height="" 
+                        data-small-header="false" 
+                        data-adapt-container-width="true" 
+                        data-hide-cover="false" 
+                        data-show-facepile="false">
+                        <blockquote cite="https://www.facebook.com/KidrakuurKultuuriklubi" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/KidrakuurKultuuriklubi">Kidrakuur Kultuuriklubi</a>
+                        </blockquote>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-gray-400 mb-4 text-sm">Ei näe kalendrit? Vaata otse Facebookist:</p>
+                    <a href="https://www.facebook.com/KidrakuurKultuuriklubi/events" target="_blank" class="inline-block border border-white text-white px-6 py-2 rounded hover:bg-white hover:text-black transition uppercase tracking-widest text-sm">
+                        Ava Facebooki Üritused
+                    </a>
+                </div>
+
+            </main>
+
+            <footer class="p-6 text-center text-white text-xs tracking-widest uppercase opacity-70 border-t border-white/10 mt-8">
+                <p>© 2026 Kidrakuur Kultuuriklubi | Masina tn 1, Tallinn</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
