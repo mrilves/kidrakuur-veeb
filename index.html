@@ -11,37 +11,29 @@
 </head>
 <body class="bg-black">
 
-    <div class="relative h-screen w-screen overflow-hidden grayscale-[100%] sepia-[.25]">
+    <div class="relative min-h-screen w-screen overflow-x-hidden grayscale-[100%] sepia-[.25]">
         
-        <video autoplay loop muted playsinline class="absolute top-0 left-0 h-full w-full object-cover blur-[1px]" data-video="0">
+        <video autoplay loop muted playsinline class="fixed top-0 left-0 h-full w-full object-cover blur-[1px] z-0">
             <source src="video.mp4" type="video/mp4">
-            Sinu brauser ei toeta videot.
         </video>
 
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        <div class="fixed inset-0 bg-black bg-opacity-50 z-0"></div>
 
-        <div class="relative z-10 flex flex-col h-screen justify-between">
+        <div class="relative z-10 flex flex-col min-h-screen justify-between">
             
             <header class="w-full p-6 flex justify-center sm:justify-end">
                 <nav>
                     <ul class="flex gap-8 text-white uppercase tracking-widest text-sm font-bold flex-wrap justify-center">
-                        <li>
-                            <a href="uritused.html" class="hover:text-gray-300 hover:underline transition">Üritused</a>
-                        </li>
-                        <li>
-                            <a href="rent.html" class="hover:text-gray-300 hover:underline transition">Ruumide rent</a>
-                        </li>
-                        <li>
-                            <a href="hooldus.html" class="hover:text-gray-300 hover:underline transition">Hooldus</a>
-                        </li>
-                        <li>
-                            <a href="kontakt.html" class="hover:text-gray-300 hover:underline transition">Kontakt</a>
-                        </li>
+                        <li><a href="index.html" class="hover:text-gray-300 hover:underline transition">Avaleht</a></li>
+                        <li><a href="hooldus.html" class="hover:text-gray-300 hover:underline transition">Hooldus</a></li>
+                        <li><a href="uritused.html" class="hover:text-gray-300 hover:underline transition">Üritused</a></li>
+                        <li><a href="rent.html" class="hover:text-gray-300 hover:underline transition">Ruumide rent</a></li>
+                        <li><a href="kontakt.html" class="hover:text-gray-300 hover:underline transition">Kontakt</a></li>
                     </ul>
                 </nav>
             </header>
 
-            <main class="flex flex-col items-center justify-center gap-10 mb-20">
+            <main class="flex flex-col items-center justify-center gap-10 my-10">
                 
                 <div class="h-[250px] w-[250px] sm:h-[300px] sm:w-[300px]">
                     <img src="logo-white.svg" alt="Kidrakuur" class="block w-full h-full object-contain">
@@ -65,9 +57,24 @@
                 </div>
             </main>
 
-            <footer class="p-4 text-center text-white text-xs tracking-widest uppercase opacity-70">
-                <p>© 2026 Kidrakuur Kultuuriklubi | Masina tn 1, Tallinn</p>
-            </footer>
+            <div class="flex flex-col items-center w-full">
+                
+                <div class="mb-8 text-center">
+                    <h3 class="text-white text-xs uppercase tracking-[0.2em] opacity-50 mb-4">Koostööpartnerid</h3>
+                    <div class="flex gap-8 items-center justify-center flex-wrap px-4">
+                        
+                        <a href="https://fienta.com/et" target="_blank" class="opacity-50 hover:opacity-100 transition duration-300 hover:scale-105">
+                            <img src="fienta-logo-black.svg" alt="Fienta" class="h-8 md:h-10 object-contain invert"> 
+                        </a>
+
+                    </div>
+                </div>
+
+                <footer class="p-4 text-center text-white text-xs tracking-widest uppercase opacity-70 w-full bg-black bg-opacity-20 backdrop-blur-sm">
+                    <p>© 2026 Kidrakuur Kultuuriklubi | Masina tn 1, Tallinn</p>
+                </footer>
+            </div>
+
         </div>
     </div>
 
