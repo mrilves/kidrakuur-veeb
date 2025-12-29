@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Kidrakuur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: sans-serif; }
+    </style>
+</head>
+<body class="bg-black">
+
+    <div class="relative min-h-screen w-screen overflow-x-hidden grayscale-[100%] sepia-[.25]">
+        
+        <video autoplay loop muted playsinline class="fixed top-0 left-0 h-full w-full object-cover blur-[2px] z-0">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <div class="fixed inset-0 bg-black bg-opacity-70 z-0"></div>
+
+        <div class="relative z-10 flex flex-col min-h-screen">
+            
+            <header class="w-full p-6 flex justify-between items-center">
+                <a href="index.html" class="block w-16 hover:opacity-80 transition">
+                    <img src="logo-white.svg" alt="Avalehele">
+                </a>
+
+                <nav>
+                    <ul class="flex gap-8 text-white uppercase tracking-widest text-sm font-bold flex-wrap justify-end">
+                        <li><a href="index.html" class="hover:text-gray-300 hover:underline transition">Avaleht</a></li>
+                        <li><a href="#" class="hover:text-gray-300 hover:underline transition">Üritused</a></li>
+                        <li><a href="#" class="hover:text-gray-300 hover:underline transition">Ruumide rent</a></li>
+                        <li><a href="kontakt.html" class="text-gray-300 underline transition">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="flex-grow flex items-center justify-center p-4">
+                <div class="bg-black bg-opacity-60 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full flex flex-col md:flex-row gap-10 border border-white/10">
+                    
+                    <div class="flex-1 text-white flex flex-col justify-center gap-6">
+                        <h1 class="text-4xl font-bold uppercase tracking-widest mb-4">Kontakt</h1>
+                        
+                        <div class="space-y-4 text-lg tracking-wide">
+                            <div>
+                                <h3 class="font-bold text-gray-400 text-sm uppercase mb-1">Aadress</h3>
+                                <p>Masina tn 1, Tallinn</p>
+                                <p class="text-sm text-gray-400">T1 taga, vana paekivihoone</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-gray-400 text-sm uppercase mb-1">E-post</h3>
+                                <a href="mailto:booking@kidrakuur.ee" class="hover:underline text-xl">booking@kidrakuur.ee</a>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-gray-400 text-sm uppercase mb-1">Sotsiaalmeedia</h3>
+                                <div class="flex gap-4 mt-2">
+                                    <a href="https://www.facebook.com/share/pEg4jLgzHZyRqfdR/?mibextid=LQQJ4d" target="_blank" class="hover:text-gray-300 transition">Facebook</a>
+                                    <span class="text-gray-600">|</span>
+                                    <a href="https://www.instagram.com/kidrakuur" target="_blank" class="hover:text-gray-300 transition">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 h-[300px] md:h-auto min-h-[300px] rounded-lg overflow-hidden bg-gray-800 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.074288673735!2d24.78912361608985!3d59.42654898169288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb566627608b%3A0x6086777651817478!2sMasina%201%2C%2010144%20Tallinn!5e0!3m2!1sen!2see!4v1703848000000!5m2!1sen!2see" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute inset-0 w-full h-full grayscale invert hover:grayscale-0 hover:invert-0 transition duration-500">
+                        </iframe>
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="p-6 text-center text-white text-xs tracking-widest uppercase opacity-70">
+                <p>© 2025 Kidrakuur Kultuuriklubi | Masina tn 1, Tallinn</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
