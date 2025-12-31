@@ -15,6 +15,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: sans-serif; }
+        
+        /* --- FIX FOR SOCIABLEKIT POPUP --- */
+        /* This forces the popup to appear above the video background and header */
+        #sk-box-overlay, 
+        .sk-pop-outer, 
+        .sk_selected_event, 
+        .sk_popup_wrapper {
+            z-index: 2147483647 !important; /* Maximum z-index possible */
+            position: fixed !important;
+        }
     </style>
 </head>
 <body class="bg-black">
@@ -52,12 +62,16 @@
                 </h1>
                 
                 <p class="text-gray-300 text-lg mb-10 text-center max-w-2xl">
-                    Siit leiad info meie järgmiste kontsertide, pidude ja sündmuste kohta.
+                    Siit leiad info meie järgmiste kontsertide, pidude ja sündmuste kohta. Info uueneb automaatselt meie Facebooki lehelt.
                 </p>
-                    <div class="sk-fb-event" data-embed-id="25638320">
-    
-                    </div><script src="https://widgets.sociablekit.com/facebook-page-events/widget.js" defer></script>
-               
+
+                <div class="w-full max-w-4xl mx-auto mb-16 flex flex-col items-center">
+                    
+                    <div class="bg-white rounded-xl shadow-2xl p-4 w-full">
+                        <div class="sk-fb-event" data-embed-id="25638320"></div>
+                        <script src="https://widgets.sociablekit.com/facebook-page-events/widget.js" defer></script>
+                    </div>
+
                     <div class="mt-4 text-center">
                         <p class="text-gray-400 text-sm mb-2">Ei näe kalendrit?</p>
                         <a href="https://www.facebook.com/KidrakuurKultuuriklubi/events" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-red-400 transition font-bold uppercase tracking-wider text-sm border-b border-transparent hover:border-red-400 pb-1">
