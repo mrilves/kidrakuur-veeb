@@ -17,6 +17,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: sans-serif; background-color: black; }
+        /* Peidame scrollbari kui modal on lahti */
+        body.modal-open { overflow: hidden; }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -71,28 +73,28 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto1.JPG')">
                         <img src="foto1.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto2.JPG')">
                         <img src="foto2.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto3.JPG')">
                         <img src="foto3.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto4.JPG')">
                         <img src="foto4.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto5.JPG')">
                         <img src="foto5.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto6.JPG')">
                         <img src="foto6.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto7.JPG')">
                         <img src="foto7.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group">
+                    <div class="aspect-video bg-gray-800 rounded-lg overflow-hidden relative group cursor-pointer" onclick="openModal('foto8.JPG')">
                         <img src="foto8.JPG" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
                 </div>
@@ -111,6 +113,36 @@
             </footer>
         </div>
     </div>
+
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-95 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 cursor-zoom-out" onclick="closeModal()">
+        <button class="absolute top-4 right-4 text-white text-5xl font-bold hover:text-red-500 transition">&times;</button>
+        <img id="modalImg" src="" alt="Suur pilt" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl border border-white/10">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const body = document.body;
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            // Väike viivitus, et fade-in animatsioon töötaks
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            body.classList.add('modal-open'); // Keelab taustal kerimise
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = ''; // Tühjendame pildi
+            }, 300);
+            body.classList.remove('modal-open');
+        }
+    </script>
 
 </body>
 </html>
