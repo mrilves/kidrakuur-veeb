@@ -12,7 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Ruumide rent ja Peoruumid Tallinnas | Kidrakuur</title>
-    <meta name="description" content="Otsid kohta sünnipäevaks või firmapeoks? Kidrakuur pakub ainulaadseid peoruume Tallinnas.">
+    <meta name="description" content="Otsid kohta sünnipäevaks või firmapeoks? Kidrakuur pakub ainulaadseid peoruume Tallinnas. Ruumide rent kontsertideks, seminarideks ja pidudeks.">
+    <meta name="keywords" content="ruumide rent tallinnas, peoruumid tallinn, sünnipäeva pidamine, peokoha rent, firmapeo korraldamine, kontserdipaik, Masina 1">
+    <meta name="author" content="Kidrakuur Kultuuriklubi">
+
+    <meta property="og:title" content="Ruumide rent ja Peoruumid Tallinnas | Kidrakuur">
+    <meta property="og:description" content="Ainulaadne peokoht Tallinnas. Avar saal, lava ja baar. Ideaalne sünnipäevadeks ja firmapidudeks.">
+    <meta property="og:image" content="https://kidrakuur.ee/foto1.JPG">
+    <meta property="og:url" content="https://kidrakuur.ee/rent.html">
+
+    <link rel="icon" type="image/svg+xml" href="logo-white.svg">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -127,18 +136,17 @@
         function openModal(src) {
             modalImg.src = src;
             modal.classList.remove('hidden');
-            // Väike viivitus, et fade-in animatsioon töötaks
             setTimeout(() => {
                 modal.classList.remove('opacity-0');
             }, 10);
-            body.classList.add('modal-open'); // Keelab taustal kerimise
+            body.classList.add('modal-open');
         }
 
         function closeModal() {
             modal.classList.add('opacity-0');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                modalImg.src = ''; // Tühjendame pildi
+                modalImg.src = '';
             }, 300);
             body.classList.remove('modal-open');
         }
